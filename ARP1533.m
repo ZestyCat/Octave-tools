@@ -40,10 +40,10 @@ A = [0,                         1,                          0, 0,               
      CO2/(1-hsd),               -1,                         0, J*CO2,                      -CO2/(1-hsd),              0,  0,   0,  0,  0, 0;
      (CO+hsd*M)/(1-hsd),        L,                          0, 0,                          -(CO+hsd*M)/(1-hsd),       -1, 0,   0,  0,  0, 0;
      CxHy,                      0,                          0, 0,                          0,                         0,  -x,  0,  0,  0, 0;
-     (1+hsd*M_prm)*NOx/(1-hsd), L_prm*NOx                0, 0, -(1+hsd*M_prm)*NOx/(1-hsd), 0,                         0,  eta, -1, -1, 0, 0;
+     (1+hsd*M_prm)*NOx/(1-hsd), L_prm*NOx,                  0, -(1+hsd*M_prm)*NOx/(1-hsd), 0,                         0,  eta, -1, -1, 0, 0;
      (1+hsd*M_prm)*NO/(1-hsd),  L_prm*NO,                   0, 0,                          -(1+hsd*M_prm)*NO/(1-hsd), 0,  0,   0,  -1, 0, 0;
      -1,                        1,                          1, 1,                          1,                         1,  1,   1,  1,  1, 0]
 
 B = [m; n; p; q; r; 0; 0; 0; 0; 0; 0]
 
-
+C = inv(A) * B
